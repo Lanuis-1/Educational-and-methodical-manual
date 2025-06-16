@@ -1,0 +1,188 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage[format=plain,labelsep=period,justification=centerlast]{caption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{ragged2e}
+\usepackage{movie15}
+\setbeamertemplate{caption}[numbered]{}%
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\def\Year{\expandafter\YEAR\the\year}
+\def\YEAR#1#2#3#4{#3#4}
+
+\graphicspath{{figs/}}
+
+%% Выбор шрифтов %%
+\usefonttheme[onlylarge]{structurebold}
+
+% Привычный шрифт для математических формул
+\usefonttheme[onlymath]{serif}
+
+% Более крупный шрифт для подзаголовков титульного листа
+\setbeamerfont{institute}{size=\normalsize}
+%%%%%%%%%%%%%%%%%%%
+
+% Если используется последовательное появление пунктов списков на
+% слайде (не злоупотребляйте в слайдах для защиты дипломной работы),
+% чтобы еще непоявившиеся пункты были все-таки немножко видны.
+\setbeamercovered{transparent} \setlength\abovecaptionskip{-10pt}
+\setlength\belowcaptionskip{-10pt}
+
+
+\makeatletter
+\defbeamertemplate*{footline}{my theme}{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author and institute in head/foot}%
+			\insertshortauthor~(\insertshortinstitute)
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.40\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}
+			\insertshorttitle
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+			\insertdate
+			\hspace{0.5cm}
+			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+}
+
+
+\definecolor{color_1}{RGB}{210, 24, 26}
+\definecolor{color_2}{RGB}{141, 29, 44}
+\definecolor{color_3}{RGB}{94, 32, 40}
+\setbeamercolor*{palette primary}{bg=color_1, fg=white}
+\setbeamercolor*{palette secondary}{bg=color_2, fg=white}
+\setbeamercolor*{palette tertiary}{bg=color_3, fg=white}
+\setbeamercolor*{titlelike}{bg=color_1, fg = white}
+\setbeamercolor*{title}{bg=color_1, fg = white}
+\setbeamercolor*{item}{fg=color_1}
+\setbeamercolor*{caption name}{fg=color_1}
+\usefonttheme{professionalfonts}
+
+
+\title[Пособие]
+{ Командная проектная работа
+	на тему: «Пособие студентов для студентов «Запутались в кубитах?  Руководство по квантовым вычислениям»»}
+
+\author[Журавлева А.Р, Коцур П.И, Бахтин А.Д.]
+{Куратор проекта:преподаватель, к.ф.-м.н.
+	Попова А.П.\\
+	Команда:\\ Коцур П.И.,ФФБ-201-О-01\\
+	Журавлева А.Р, гр ФФБ-201-О-01\\
+	Бахтин А.Д, гр ФФБ-201-О-01}
+
+\institute[ОмГУ]
+{
+	ОмГУ им. Ф.М.~Достоевского\\[5pt]
+	
+}
+
+\date[Омск -- 20\Year]
+{Омск -- 20\Year}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	
+	
+	\begin{frame}\frametitle{Цель}
+		\justifying \textbf {Наименование проекта}: Пособие студентов для студентов «Запутались в кубитах?  Руководство по квантовым вычислениям».\\
+		
+		\justifying \textbf{Время и место его осуществления}: 28.04.2025 – 21.06.2025, Омский государственный университет им. Ф.М. Достоевского.\\
+		
+		\justifying \textbf {Описание проблемы, решаемой в проекте}: Проблемой проекта является необходимость в составлении учебно-методического пособия с названием «Запутались в кубитах?  Руководство по квантовым вычислениям», разработанного для обеспечения базового понимания квантовых вычислений студентами младших курсов.\\
+		
+		\justifying  \textbf{Краткое содержание проекта}: Пособие с названием «Запутались в кубитах?  Руководство по квантовым вычислениям», которое поможет получить базовое понимание квантовых вычислений, путем анализа и систематизации информации. \\
+	\end{frame}
+	
+	
+	\begin{frame}\frametitle{Глава 1: Основные положения}
+		\justifying
+		Данная глава посвещена основополагающим элементам теории квантовых вычислений. Представлены два параграфа:
+		\begin{itemize}
+			\item \justifying Кубит -- в этом параграфе дано определение основному понятию квантовых вычислений.
+			\item \justifying Квантовое преобразование Фурье -- данный параграф посвящен одному из основных преобразований.
+		\end{itemize}
+		
+	\end{frame}	
+	\begin{frame}\frametitle{Глава 2: Ошибки}
+		\justifying
+		В квантовых вычислениях, подобно классическим, информация подвержена ошибкам. В этой главе  рассмотрены основные проблемы, связанные с возникновением ошибок в квантовых вычислениях, и почему методы, применяемые в классических вычислениях, здесь не всегда работают. Сама глава поделена на две подглавы, представим краткое описания.
+		
+	\end{frame}
+	
+	\begin{frame}\frametitle{Основные проблемы}
+		
+		\begin{itemize}
+			\item \justifying Декогерентизация -- 	Контакт квантового компьютера с окружающей средой (декогерентизация) является основной причиной ошибок, разрушающих квантовую информацию. Этому явлениею и посвящёен параграф.
+			\item \justifying Неидеальность операций -- Даже идеальное изолирование от окружающей среды не гарантирует отсутствия ошибок. Про это явление написано в параграфе.
+			\item \justifying Почему классические методы не работают.
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}\frametitle{Специфические трудности коррекции ошибок в квантовых вычислениях}
+		\justifying
+		Квантовая информация более хрупка, чем классическая, и требует специальных методов коррекции ошибок. именно этому  посвящена вторая подглава.:
+		\begin{itemize}
+			\item \justifying Фазовые ошибки.
+			\item \justifying Малые ошибки.
+			\item \justifying Измерение – причина возмущения.
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Глава 3: Квантовые вычисления и квантовые компьютеры}
+		\justifying В данной главе рассматриваются квантовые вычисления, квантовые алгоритмы, устройство и применение квантовых компьютеров, а также представлено знакомство с синтаксисом языка для квантового компьютера OPENQASM 2.0 на примере генератора случайных чисел.
+		
+		Глава состоит из следующих параграфов:
+		\begin{itemize}
+			\item \justifying Квантовые вычисления. Однокубитовые и многокубитовые гейты. Состояние Белла
+			\item \justifying Квантовый язык программирования OPENQASM 2.0. Генератор случайных чисел на квантовом компьютере
+			\item \justifying Квантовый компьютер
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}\frametitle{Глава 4: Квантовая информация}
+		\justifying
+		В этой главе происходит погружение в основы квантовой информации, изучение ключевых концепций и их удивительных приложений. Во многом затронутые темы носят фундаментальный характер. В главе представлены темы:
+		\begin{itemize}
+			\item \justifying Квантовая информация.
+			\item \justifying Квантовая различимость.
+			\item \justifying Квантовый параллелизм.
+			\item \justifying Квантовая телепортация.
+			\item \justifying Квантовая криптография.
+			\item \justifying Невозможность клонирования.
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}\frametitle{Глава 5: Реализация квантовых алгоритмов на языке квантового программирования }
+		\justifying Глава "Реализация квантовых алгоритмов на языке квантового программирования" содержит в себе примеры некоторых основных алгоритмов, основанных на квантовой версии преобразования Фурье, а также, само квантовое преобразование Фурье, пояснение кода, а также, объяснение программ, реализующих алгоритмы и задачи, которые могут помочь читающему лучше освоить материал.
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Спасибо за внимание!}
+		\begin{center}
+			\Large Спасибо за внимание! \\
+			\vspace{1cm}
+			\href{https://github.com/Lanuis-1/Educational-and-methodical-manual.git}{ссылка на GitHub с материалами} \\
+			\vspace{0.5cm}
+			\includegraphics[width=3cm]{qrcode.png}
+		\end{center}
+	\end{frame}
+\end{document}
